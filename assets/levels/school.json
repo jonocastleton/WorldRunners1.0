@@ -1,0 +1,51 @@
+{
+    "assets": {
+      "school": {"type": "image", "source": "assets/images/school.png"},
+      "pablo": {"type": "image", "source": "assets/images/pablo.png"},
+      "student": {"type": "image", "source": "assets/images/student.png"},
+      "bubble": {"type": "image", "source": "assets/images/bubble2.png"}
+    },
+    "groups": [
+      "background",
+      "texts",
+      "player"
+    ],
+    "map": {
+      "key": "school",
+      "scene": ["school"]
+    },
+    "prefabs": {
+      "background": {
+          "type": "sprite",
+          "position": {"x": 0, "y": 0},
+          "properties": {
+            "texture": "school",
+            "group": "background"
+          }
+      },
+      "player": {
+          "type": "sprite",
+          "position": {"x": 200, "y": 300},
+          "properties": {
+            "texture": "student",
+            "group": "player"
+          }
+      },
+      "bubble": {
+          "type": "sprite",
+          "position": {"x": 800, "y": 50},
+          "properties": {
+            "texture": "bubble",
+            "group": "background"
+          }
+      },
+      "friend": {
+          "type": "sprite",
+          "position": {"x": 400, "y": 300},
+          "properties": {
+            "texture": "pablo",
+            "group": "player"
+          }
+      }
+    }
+}

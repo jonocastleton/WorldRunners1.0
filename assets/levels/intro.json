@@ -1,0 +1,53 @@
+{
+    "assets": {
+      "background": {"type": "image", "source": "assets/images/thebeginning.png"},
+      "pablo": {"type": "image", "source": "assets/images/pablo.png"},
+      "sage": {"type": "image", "source": "assets/images/wise.png"},
+      "bubble": {"type": "image", "source": "assets/images/bubble.png"}
+    },
+
+    "groups": [
+      "background",
+      "texts",
+      "player"
+    ],
+
+    "map": {
+      "key": "school",
+      "scene": ["school"]
+    },
+    "prefabs": {
+      "background": {
+          "type": "sprite",
+          "position": {"x": 0, "y": 0},
+          "properties": {
+            "texture": "background_image",
+            "group": "background"
+          }
+      },
+      "bubble": {
+          "type": "sprite",
+          "position": {"x": 800, "y": 50},
+          "properties": {
+            "texture": "bubble",
+            "group": "background"
+          }
+      },
+      "sage": {
+          "type": "sprite",
+          "position": {"x": 200, "y": 300},
+          "properties": {
+            "texture": "sage",
+            "group": "player"
+          }
+      },
+      "friend": {
+          "type": "sprite",
+          "position": {"x": 400, "y": 300},
+          "properties": {
+            "texture": "pablo",
+            "group": "player"
+          }
+      }
+    }
+}

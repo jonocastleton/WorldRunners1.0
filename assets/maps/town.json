@@ -1,0 +1,20 @@
+{
+  "layers":[
+    {
+      "name":"background",
+      "opacity": 1,
+      "type": "maplayer",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name":"buildings",
+      "opacity": 1,
+      "type": "maplayer",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+    "assets": {
+      "level1": {"type": "image", "source": "assets/images/map.png"},
+      "student": {"type": "spritesheet", "source": "assets/images/walkingStudent.png","frame_width":400, "frame_height":400,"frames":3},
+      "monster": {"type": "image", "source": "assets/images/monsterGreen.png"},
+      "friend":  {"type": "image", "source": "assets/images/friendHead.png"},
+      "message_box_image": {"type": "image", "source": "assets/images/message_box.png"}
+    },
+    "groups": [
+      "background",
+      "doors",
+      "player",
+      "monster_spawner",
+      "npcs",
+      "hud"
+    ],
+    "map": {
+      "key": "level1",
+      "scene": ["level1"]
+    },
+    "prefabs": {
+      "player": {
+          "type": "player",
+          "position": {"x": 200, "y": 300},
+          "properties": {
+            "texture": "student",
+            "group": "player",
+            "scale": {"x": ".5", "y": ".5"},
+            "walking_speed": "50"
+          }
+      },
+      "monster": {
+          "type": "monster_spawner",
+          "position": {"x": 800, "y": 250},
+          "properties": {
+            "texture": "monster",
+            "group": "monster_spawner",
+            "collision": true
+          }
+      },
+      "door": {
+        "type": "door",
+        "position": {"x": 1150, "y": 250},
+        "properties": {
+          "group": "doors",
+          "next_level": "assets/levels/tavern.json"
+        }
+      },
+      "friend": {
+        "type": "npc",
+        "position": {"x": 100, "y": 80},
+        "properties": {
+          "group": "npcs",
+          "texture": "friend",
+          "message": "friend_message",
+          "scale": {"x": 0.25, "y": 0.25},
+          "anchor": {"x": 0.5, "y": 0.5}
+          }
+      }
+    },
+    "user_input": {
+      "world_map_user_input": "assets/user_inputs/world_map_user_input.json",
+      "talking_user_input": "assets/user_inputs/talking_user_input.json"
+    },
+    "initial_user_input": "world_map_user_input",
+    "npc_messages": {
+      "friend_message": "assets/npc_messages/friend_message.txt"
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "assets": {
+      "background_image": {"type": "image", "source": "assets/images/tavern.png"},
+      "student": {"type": "spritesheet", "source": "assets/images/walkingStudent.png","frame_width":400, "frame_height":400,"frames":3}
+    },
+    "groups": [
+      "background",
+      "doors",
+      "player",
+      "monster_spawner"
+    ],
+    "map": {
+      "key": "level1",
+      "scene": ["level1"]
+    },
+    "prefabs": {
+      "background": {
+          "type": "sprite",
+          "position": {"x": 0, "y": 0},
+          "properties": {
+            "texture": "background_image",
+            "group": "background"
+          }
+      },
+      "player": {
+          "type": "player",
+          "position": {"x": 200, "y": 300},
+          "properties": {
+            "texture": "student",
+            "group": "player",
+            "scale": {"x": ".5", "y": ".5"},
+            "walking_speed": "50"
+          }
+      },
+      "door": {
+        "type": "door",
+        "position": {"x": 1150, "y": 300},
+        "properties": {
+          "group": "doors",
+          "next_level": "assets/levels/world.json"
+        }
+      }
+    },
+    "user_input": {
+      "world_map_user_input": "assets/user_inputs/world_map_user_input.json",
+      "talking_user_input": "assets/user_inputs/talking_user_input.json"
+    },
+    "initial_user_input": "world_map_user_input"
+  }

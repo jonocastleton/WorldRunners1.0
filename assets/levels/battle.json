@@ -1,0 +1,63 @@
+{
+    "assets": {
+      "fightScene": {"type": "image", "source": "assets/images/fightScene.png"},
+      "student": {"type": "spritesheet", "source": "assets/images/walkingStudent.png","frame_width":400, "frame_height":400,"frames":3},
+      "monster": {"type": "image", "source": "assets/images/monsterGreen.png"},
+      "attack": {"type": "image", "source": "assets/images/attack.jpg"}
+
+    },
+    "groups": [
+      "background",
+      "texts",
+      "player_units",
+      "monster_spawner",
+      "hud"
+    ],
+    "prefabs": {
+      "background": {
+          "type": "background",
+          "position": {"x": 0, "y": 0},
+          "properties": {
+            "texture": "fightScene",
+            "group": "background",
+            "scale": {"x": "1", "y": ".7"}
+          }
+      },
+      "hero": {
+          "type": "player_unit",
+          "position": {"x": 200, "y": 400},
+          "properties": {
+            "texture": "student",
+            "group": "player_units",
+            "scale": {"x": ".5", "y": ".5"},
+            "anchor": {"x": 0.5, "y": 0.5}
+          }
+      },
+      "monster": {
+          "type": "monster_spawner",
+          "position": {"x": 800, "y": 400},
+          "properties": {
+            "texture": "monster",
+            "group": "monster_spawner",
+            "collision": true
+          }
+      },
+      "actions_menu": {
+        "type": "menu",
+        "position": {"x": 300, "y": 80},
+        "properties": {
+            "group": "hud",
+            "menu_items": {
+                  "attack": {
+                    "type": "menu_item",
+                    "position": {"x": 300, "y": 80},
+                    "properties": {
+                        "group": "hud",
+                        "texture": "attack"
+                    }
+                  }
+            }
+        }
+      }
+    }
+}
